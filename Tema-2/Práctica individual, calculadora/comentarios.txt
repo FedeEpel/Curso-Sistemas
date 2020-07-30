@@ -1,0 +1,19 @@
+Hola Fede, ¿Cómo estás?
+
+Está muy bueno tu trabajo, y ya te adelantaste con el CSS. Genial!!
+
+Te dejo algunos comentarios. Para la actividad no había problema en dejar fuera o dentro de la tabla el display
+y el botón de borrar.
+
+Para incluirlo dentro correctamente sería así:
+
+<tr>
+  <td colspan="4">
+    <input type="text"></input>
+  </td>
+</tr>
+
+De manera análoga para el botón borrar.
+Solo que el <button> necesita un atributo más:
+
+<button style="width:100%">Borrar</button>
