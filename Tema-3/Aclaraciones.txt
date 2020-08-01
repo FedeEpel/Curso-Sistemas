@@ -1,0 +1,13 @@
+Buenas Mati, te mando el formulario con el método post, sin embargo hay cosas que no pude hacer.
+
+Primero que no encuentro la forma de hacer que se vea como en la imagen que está en la página del curso, ya que no logro
+poner los dos apartados en el mismo renglón y que quede prolijo. Por ejemplo al principio, en nombre y apellido, el apellido
+me queda pegado al nombre y no puedo lograr que quede arriba del input del apellido. Eso me pasa con los demas.
+
+Por otra parte, encontré un script para que la barra muestre en tiempo real la cantidad de ingresos, no se si hay una forma
+de lograrlo utilizando solamente html.
+
+
+Pd: leí que el input no necesita etiqueta de cierre.
+
+
