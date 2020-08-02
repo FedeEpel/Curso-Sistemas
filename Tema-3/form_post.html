@@ -25,31 +25,39 @@
 		<form action="get_test.php" method="POST" enctype="multipart/form-data">
 			<table>
 				<tr>
-					<td><h1 align="center">Create Account</h1></td>
+					<td>
+						<h1 align="center">Create Account</h1>
+					</td>
 				</tr>
 				<tr>
 					<td>
 						<label>First name *</label>		
-						<label>Last name</label>
 						<br>	
-						<input type="text" name="name" placeholder="enter your first name">
-						<input type="text" name="surname" placeholder="enter your last name">
+						<input type="text" name="name" placeholder="enter your first name" style="width: 90%">
+					</td>
+					<td>
+						<label>Last name</label>
+						<br>
+						<input type="text" name="surname" placeholder="enter your last name" style="width: 90%">
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<label>Email *</label>
 						<br>
-						<input type="email" name="email" placeholder="enter your email">
+						<input type="email" name="email" placeholder="enter your email" style="width: 200%">
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<label>Password *</label>
+						<br>
+						<input type="password" name="password" placeholder="enter your password" style="width: 90%">
+					</td>
+					<td>
 						<label>Confirm Password *</label>
 						<br>
-						<input type="password" name="password" placeholder="enter your password">
-						<input type="password" name="password" placeholder="enter your password again">
+						<input type="password" name="password" placeholder="enter your password again" style="width: 90%">
 					</td>
 				</tr>
 				<tr>
@@ -61,8 +69,7 @@
 						<input type="radio" id="female" name="gender" value="female">
 						<label>Female</label>
 					</td>
-				</tr>
-				<tr>
+				
 					<td>
 						<label>Hobbies</label>
 						<br>
@@ -80,18 +87,16 @@
 					<td>
 						<label>Source of Income</label>
 						<br>
-						<select name="sourceOfIncome">
+						<select name="sourceOfIncome" style="width: 93%">
 							<option value="Employed">Employed</option>
-							<option value="Property owner">Property owner</option>
+							<option value="Property owner">Property Owner</option>
 							<option value="Income from Dividend">Income from Dividend</option>
 						</select>
 					</td>
-				</tr>
-				<tr>
 					<td>
 						<label>Income</label>
 						<br>
-						<input type="range" id="income" min="0" max="100">
+						<input type="range" id="income" min="0" max="100" style="width: 75%">
      					<span id="inc">50</span>
      					<label>K</label>
 					</td>
@@ -102,22 +107,22 @@
 						<br>
 						<input type="file" name="image" accept=".jpg, .png, .gif, .svg">
 					</td>
-				</tr>
-				<tr>
 					<td>
 						<label>Age</label>
 						<br>
-						<input type="text" name="age" placeholder="enter your age">
+						<input type="text" name="age" placeholder="enter your age" style="width: 90%">
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<label>Bio</label>
 						<br>
-						<textarea name="bio"></textarea>
+						<textarea name="bio" style="width: 201%"></textarea>
 					</td>
 				</tr>
 				<tr>
+					<td>
+					</td>
 					<td align="right">
 						<input type="submit" name="submit" value="Create">
 					</td>
