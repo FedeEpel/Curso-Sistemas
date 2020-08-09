@@ -11,3 +11,13 @@ de lograrlo utilizando solamente html.
 Pd: leí que el input no necesita etiqueta de cierre.
 
 
+Nueva actualizacion, 09/08/2020
+
+Buenas,
+
+Me acerque lo mas que pude a el formulario con el framework de w3, pero tengo una duda. El codigo siento que quedo muy desprolijo
+ya que todos los cambios con el framework los hice en el mismo archivo, ya que no pude hacerlo en otro archivo aparte, no se siquiera
+si eso es posible.
+
+Ademas de ciertas cosas que no pude lograr, como poner la letra en negrita, el header lo trate de alinear manualmente. Tampoco pude 
+sombrear el fondo donde esta el boton create, y que quede prolijo.

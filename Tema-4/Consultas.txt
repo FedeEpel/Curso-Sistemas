@@ -1,0 +1,15 @@
+Hola Mati!
+
+Tengo un par de dudas todavia con respecto a como se tiene que ver la calculadora.
+
+No logre hacer que el boton de borrar y el display queden alineados con los demas botonos, asique lo hize manualmente cambiando el 
+largo de los elementos.
+
+Despues el tema de los numeros cuando el boton esta apretado, no me convenze, no se si habra un metodo mejor, yo solo le cambie
+el tamaño a la fuente para que dé el efecto de que se esta apretando y que se muevan los numeros y signos.
+
+Por ultimo tengo un problema con el boton borrar al momento de que se oprime el mismo, que a diferencia de los demas botones
+da un efecto contrario de como tiene que ser. No se si se entiende, pero simplemente apreta un boton cualquiera y despues el de borrar
+y te vas a dar cuenta.
+
+Saludos y gracias!

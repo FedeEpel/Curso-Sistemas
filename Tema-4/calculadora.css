@@ -8,6 +8,7 @@
 	text-align: right;
 	font-size: 100%;
 	
+	width: 152px;
 	height: 32px;
 	margin: 3px;
 
@@ -16,13 +17,16 @@
 	box-shadow: 1px 1px grey;
 }
 
-.blue_button
+.font_button
 {
 	color: white;
-	background-color: blue;
-
-	font-size: 70%; 
+	font-size: 70%;
 	font-weight: bold;
+}
+
+.blue_button
+{
+	background-color: #2861C7;
 
 	width: 32px;
 	height: 32px;
@@ -30,16 +34,33 @@
 
 	border-radius: 5px;
 	border-style: none;
-	box-shadow: 0px 3px rgb(0,0,174);
+	box-shadow: 0px 3px #244F9D;
+}
+
+.blue_button:hover
+{
+	background-color: #0548B3;
+	box-shadow: 0px 3px #043480;
+}
+
+.blue_button:focus
+{
+	outline: none;
+}
+
+.blue_button:active
+{
+	font-size: 63%;
+
+	height: 28px;
+
+	background-color: #0548B3;
+	box-shadow: 0px 5px #0548B3;
 }
 
 .green_button
 {
-	color: white;
 	background-color: rgb(109, 211, 51);
-
-	font-size: 70%; 
-	font-weight: bold;
 
 	width: 32px;
 	height: 32px;
@@ -50,13 +71,30 @@
 	box-shadow: 0px 3px rgb(0,174,0);
 }
 
+.green_button:hover
+{
+	background-color: #4FBE00;
+	box-shadow: 0px 3px #038013;
+}
+
+.green_button:focus
+{
+	outline: none;
+}
+
+.green_button:active
+{
+	font-size: 63%;
+
+	height: 28px;
+
+	background-color: #4FBE00;
+	box-shadow: 0px 5px #4FBE00;
+}
+
 .yellow_button
 {
-	color: white;
-	background-color: rgb(255, 180, 51);
-
-	font-size: 70%; 
-	font-weight: bold;
+	background-color: #E9C420;
 
 	width: 32px;
 	height: 32px;
@@ -67,19 +105,55 @@
 	box-shadow: 0px 3px rgb(227, 161, 44);
 }
 
+.yellow_button:hover
+{
+	background-color: #E5AD18;
+	box-shadow: 0px 3px #BF9117;
+}
+
+.yellow_button:focus
+{
+	outline: none;
+}
+
+.yellow_button:active
+{
+	font-size: 63%;
+	
+	height: 28px;
+
+	background-color: #E5AD18;
+	box-shadow: 0px 5px #E5AD18;
+}
+
 .red_button
 {
-	color: white;
-	background-color: red;
+	background-color: #DE2F24;
 
-	font-size: 70%;
-	font-weight: bold;
-
-	width: 100%;
+	width: 161px;
 	height: 32px; 
 	margin: 3px;
 
 	border-radius: 5px;
 	border-style: none;
-	box-shadow: 0px 3px rgb(199, 40, 40);
+	box-shadow: 0px 3px #B82C23;
+}
+
+.red_button:hover
+{
+	background-color: #C1291F;
+	box-shadow: 0px 3px #8F170F;
+}
+
+.red_button:focus
+{
+	outline: none;
+}
+
+.red_button:active
+{
+	height: 28px;
+
+	background-color: #C1291F;
+	box-shadow: 0px 5px #C1291F;
 }
