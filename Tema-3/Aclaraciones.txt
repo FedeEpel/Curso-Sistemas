@@ -1,4 +1,4 @@
-Buenas Mati, te mando el formulario con el método post, sin embargo hay cosas que no pude hacer.
+﻿Buenas Mati, te mando el formulario con el método post, sin embargo hay cosas que no pude hacer.
 
 El formulario no me quedo prolijo del todo, no puedo lograr que la cabecera me quede centrada. Tampoco como hacer que los hobbies
 no sobresalgan y el boton create quede alineado con los inputs. Y otras cosas que arregle cambiandole el largo manualmente, no creo 
@@ -21,3 +21,103 @@ si eso es posible.
 
 Ademas de ciertas cosas que no pude lograr, como poner la letra en negrita, el header lo trate de alinear manualmente. Tampoco pude 
 sombrear el fondo donde esta el boton create, y que quede prolijo.
+
+-------------------------------------------
+Respuestas 13/8/2020:
+
+Hola Fede!!
+Paso a contestarte varias de tus consultas:
+
+"Por otra parte, encontré un script para que la barra muestre en tiempo real la cantidad de ingresos, no se si hay una forma
+de lograrlo utilizando solamente html."
+
+Está perfecto, no, no hay manera de hacerlo solamente con HTML. Sí o sí, se necesita coordinar el valor de la etiqueta con el
+deslizador del elemento <input type="range"... vía JavaScript. Está muy bien que te hayas topado con este inconveniente, porque
+es ahí donde empezás a encontrar las limitaciones de un framework de CSS puro. Cuando los elementos gráficos empiezan a estar
+unos en función de otros, como este caso donde el label depende del deslizador, se te empiezan a quedar cortos porque no se puede 
+solucionar vía CSS. Si involucrás un framework de CSS+JS, probablemente encuentres que esa cuestión está solucionada, pero nunca hay
+que perder de vista si conviene incluir muchas dependencias, ó pagar el costo de escribir unas líneas de JS por uno para resolverlo.
+
+Cuando veamos la DOM API, ahí vamos a ver las mejores formas para hacer estas cosas.
+
+----
+
+"El codigo siento que quedo muy desprolijo ya que todos los cambios con el framework los hice en el mismo archivo, 
+ya que no pude hacerlo en otro archivo aparte, no se siquiera si eso es posible."
+
+El código está bastante bien. El resultado sería un HTML donde sus elementos internamente se decoran y distribuyen utilizando
+las clases del framework W3.css. Sobre lo de los archivos aparte, los único que podés hacer en un archivo .css aparte son las decoraciones específicas
+tuyas. Por ejemplo, me refiero los style="" específicos que están en algunos elementos.
+Conviene crear un archivo css propio, incluírlo en el HTML en el <head>, y que los "style" no estén sueltos por el código.
+
+Ejemplo:
+
+<div class="w3-container w3-grey w3-border-bottom w3-center w3-margin" style="width: 679px">
+
+Esa línea debería reemplazarse en todo caso por algo así:
+
+<div class="w3-container w3-grey w3-border-bottom w3-center w3-margin div-size">
+
+y en el archivo CSS
+
+.div-size
+{
+   width:679px;
+}
+
+-----
+
+Ademas de ciertas cosas que no pude lograr, como poner la letra en negrita, el header lo trate de alinear manualmente. Tampoco pude 
+sombrear el fondo donde esta el boton create, y que quede prolijo.
+
+Esto se soluciona vía 2 formas, primero siempre hay que ver si el framework CSS dispone de clases ya confeccionadas para incorporárselas
+a los elementos puntuales que querés que el texto esté en negrita, lo mismo para los otros casos.
+Si el framework no tiene ninguna clase para hacer eso, entonces la metodología es la misma que el caso anterior.
+Se construye una clase en el archivo CSS propio, y se especifica la propiedad:
+
+.negrita
+{
+    font-weight: bold;
+}
+
+<div class="negrita"> <-- ejemplo.
+
+Según la documentación de W3 https://www.w3schools.com/w3css/w3css_text.asp
+Los ejemplos muestran que no tienen clases para personalizar eso, con lo cual, lo conveniente sería construir la clase y usarla en el HTML.
+
+
+Sobre el tema del fondo en donde está el botón "create", lo podés solucionar decorando la fila que contiene dicho botón,
+asignándole la propiedad CSS así:
+
+.fondo-formulario
+{
+    background-color: gray/hex/rgb(?,?,?);
+}
+
+<tr class="fondo-formulario ... " >... etc.
+
+
+La alineación del header, esas son las partes más "molestas" en CSS. Disponer de los elementos en la ubicación deseada.
+Generalmente conviene siempre trabajar con porcentajes y no píxeles. Porque los píxeles son posiciones absolutas en la pantalla, y dependen de la resolución.
+En cambio los porcentajes son una proporción sobre la resolución.
+
+Ejemplo:
+
+si vos especificás en alguna parte: width:50% <-- estarías diciendo que el elemento ocupará el 50% del tamaño que le proporciona el elemento padre.
+Si el body ocupa el 100% de la pantalla... y el formulario interno tiene un ancho de 50%, será el 50% del body. Lo mismo ocurre con las posiciones.
+
+Este framework te provee algunas clases para posicionar elementos: Ejemplo:  class="w3-center"
+Algo que podés probar es remover el ajuste manual con el style o una clase propia, y primero ver si agregando la clase w3-center, solucionás esto.
+
+Ejemplo de w3 schools:
+https://www.quanzhanketang.com/w3css/tryw3css_examples_modal_login.html?filename=tryw3css_examples_modal_login
+(En el div que contiene la imágen del usuario se ve el caso)
+
+¡Espero que te sirva!
+De lo contrario podemos verlo en clase.
+Abrazo.
+
+
+
+
+

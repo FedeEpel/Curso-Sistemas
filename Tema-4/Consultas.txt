@@ -1,4 +1,4 @@
-Hola Mati!
+﻿Hola Mati!
 
 Tengo un par de dudas todavia con respecto a como se tiene que ver la calculadora.
 
@@ -13,3 +13,80 @@ da un efecto contrario de como tiene que ser. No se si se entiende, pero simplem
 y te vas a dar cuenta.
 
 Saludos y gracias!
+
+------------------------------
+
+Hola Fede!
+
+Respuestas:
+
+"No logre hacer que el boton de borrar y el display queden alineados con los demas botonos, asique lo hize manualmente cambiando el 
+largo de los elementos."
+
+Bien, la columna que contiene el elemento del botón borrar, debe primero tener asignado <td colspan="4"> para que la tabla comprenda
+que esa columna pretende abarcar el tamaño de las 4 columnas y quede estable el tamaño base.
+Luego, el botón rojo, debe ocupar el 100% del tamaño que le otorga el elemento td, entonces, en la clase del CSS de dicho botón, 
+tiene que decir width:100%. 
+
+.red_button
+{
+    ...etc..
+
+    width:100%;
+
+    ...etc..
+}
+
+Con el display, tiene que darse lo mismo. El procedimiento es idéntico.
+
+-----------
+
+"Despues el tema de los numeros cuando el boton esta apretado, no me convenze, no se si habra un metodo mejor, yo solo le cambie
+el tamaño a la fuente para que dé el efecto de que se esta apretando y que se muevan los numeros y signos."
+
+Muy buena observación. No es trivial solucionar eso. Sí, hay una forma mejor de resolverlo. Sería aplicando un efecto entre el borde y una transformación:
+Acá se ve claramente: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
+Cuando el botón está activo, hay que aplicar la propiedad transform: translateY(??px) donde ?? serían la cantidad de píxeles que bajaría el botón
+al ser presionado. 
+
+------------
+
+"Por ultimo tengo un problema con el boton borrar al momento de que se oprime el mismo, que a diferencia de los demas botones
+da un efecto contrario de como tiene que ser. No se si se entiende, pero simplemente apreta un boton cualquiera y despues el de borrar
+y te vas a dar cuenta."
+
+Lo que está pasando en ese caso, es que por ser el último elemento. Éste es el que está controlando el alto de la última fila.
+Entonces al presionarse el botón, el redimensionamiento hace que suba el borde del fondo, simulando lo contrario.
+Se soluciona estableciéndole un tamaño a la última fila con "heigth".
+
+------------
+
+Con respecto a la actividad, está muy bien, está prolijito el código y hacés un buen uso de las propiedades CSS.
+A veces las cosas no queda exactamente pulidas al 100%, eso requiere práctica de interactuar con los elementos. 
+Hay cosas que se logran con truquitos visuales. 
+Lo que te puedo comentar como modo de sugerencia, es que las cuestiones de los botones como:
+
+width: 32px;
+height: 32px;
+margin: 3px;
+
+Son propiedades que se te repiten en todos los botones de la grilla, con lo cual, para no replicar código
+te conviene siempre quitar eso de allí, y construir una clase nueva:
+
+.button-calc-grid
+{
+	width: 32px;
+	height: 32px;
+	margin: 3px;
+}
+
+De esa manera te asegurás que si hay que acomodar algo, modificando solo el valor de alguna de esas propiedades
+afectás a todos los elementos que tengan dicha clase.
+
+Otra cosa, hay muchísimas formas de acomodar elementos. Todo depende de cómo gestionemos los elementos.
+En tu caso elegiste el botón concretamente. Y está perfecto, así lo vimos en clase con el ejemplo.
+Otra forma de controlar el espaciamiento es afectando al elemento td, colocándole los márgenes y tamaños concretos, y
+dejar que los botones internamente ocupen el 100% de esos <td>.
+
+Igualmente, todo eso se descubre con la práctica, probando y probando. No pretendo que hagas eso, pero sí te lo comento
+para que sepas que hay muchas muchas maneras de lograr efectos similares.
