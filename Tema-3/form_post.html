@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" type="text/css" href="form_post.css">
 		<title>Formulario POST</title>
 	</head>
 
@@ -24,44 +25,44 @@
 	<body>
 
 		<form action="get_test.php" method="POST" enctype="multipart/form-data">
-			<table class="w3-light-grey w3-margin" style="padding: 35px">
-				<div class="w3-container w3-grey w3-border-bottom w3-center w3-margin" style="width: 679px">
+			<table class="w3-margin table-padding">
+				<div class="w3-container w3-light-grey w3-border-bottom w3-center w3-margin div-size">
   					<h1>Create Account</h1>
 				</div>
 				<tr>
 					<td>
-						<label class="w3-text-teal">First name *</label>		
+						<label class="w3-text-teal font">First name *</label>		
 						<br>	
 						<input class="w3-input w3-border w3-round" type="text" name="name" placeholder="enter your first name">
 					</td>
 					<td>
-						<label class="w3-text-teal">Last name</label>
+						<label class="w3-text-teal font">Last name</label>
 						<br>
 						<input class="w3-input w3-border w3-round" type="text" name="surname" placeholder="enter your last name">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="w3-text-teal">Email *</label>
+						<label class="w3-text-teal font">Email *</label>
 						<br>
-						<input class="w3-input w3-border w3-round" type="email" name="email" placeholder="enter your email"  style="width: 186%">
+						<input class="w3-input w3-border w3-round email-size" type="email" name="email" placeholder="enter your email">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="w3-text-teal">Password *</label>
+						<label class="w3-text-teal font">Password *</label>
 						<br>
 						<input class="w3-input w3-border w3-round" type="password" name="password" placeholder="enter your password">
 					</td>
 					<td>
-						<label class="w3-text-teal">Confirm Password *</label>
+						<label class="w3-text-teal font">Confirm Password *</label>
 						<br>
 						<input class="w3-input w3-border w3-round" type="password" name="password" placeholder="enter your password again">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="w3-text-teal">Gender:</label>
+						<label class="w3-text-teal font">Gender:</label>
 						<br>
 						<input type="radio" id="male" name="gender" value="male">
 						<label class="w3-text-dark-grey">Male</label>
@@ -70,7 +71,7 @@
 					</td>
 				
 					<td>
-						<label class="w3-text-teal">Hobbies</label>
+						<label class="w3-text-teal font">Hobbies</label>
 						<br>
 						<input type="checkbox" id="music" name="hobbies" value="music">
 						<label class="w3-text-dark-grey" for="music">Music</label>
@@ -84,7 +85,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="w3-text-teal">Source of Income</label>
+						<label class="w3-text-teal font">Source of Income</label>
 						<br>
 						<select class="w3-input w3-border w3-round" name="sourceOfIncome">
 							<option value="Employed">Employed</option>
@@ -93,30 +94,30 @@
 						</select>
 					</td>
 					<td>
-						<label class="w3-text-teal">Income</label>
+						<label class="w3-text-teal font">Income</label>
 						<br>
-						<input type="range" id="income" min="0" max="100" style="width: 80%">
+						<input class="range-size" type="range" id="income" min="0" max="100">
      					<span class="w3-teal w3-round" id="inc">50</span>
      					<label class="w3-teal w3-round">K</label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="w3-text-teal">Upload Profile Picture</label>
+						<label class="w3-text-teal font">Upload Profile Picture</label>
 						<br>
 						<input class="w3-text-dark-grey" type="file" name="image" accept=".jpg, .png, .gif, .svg">
 					</td>
 					<td>
-						<label class="w3-text-teal">Age</label>
+						<label class="w3-text-teal font">Age</label>
 						<br>
 						<input class="w3-input w3-border w3-round" type="text" name="age" placeholder="enter your age">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="w3-text-teal">Bio</label>
+						<label class="w3-text-teal font">Bio</label>
 						<br>
-						<textarea class="w3-input w3-border w3-round" name="bio" style="width: 186%"></textarea>
+						<textarea class="w3-input w3-border w3-round textarea-size" name="bio"></textarea>
 					</td>
 				</tr>
 				<tr>
