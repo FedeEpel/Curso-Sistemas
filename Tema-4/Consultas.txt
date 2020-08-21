@@ -90,3 +90,10 @@ dejar que los botones internamente ocupen el 100% de esos <td>.
 
 Igualmente, todo eso se descubre con la práctica, probando y probando. No pretendo que hagas eso, pero sí te lo comento
 para que sepas que hay muchas muchas maneras de lograr efectos similares.
+
+------------------
+
+20/8/2020:
+
+Te quedó excelente la calculadora Fede!!
+Abrazo.
