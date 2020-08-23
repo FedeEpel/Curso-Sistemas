@@ -1,0 +1,3 @@
+Buenas Mati, te escribo para comentarte de que no puedo resolver la actividad individual 3 del bloque tematico 5. 
+La seleccionar las palabras de un texto que comienzan con n, s, a y d.
+Hice algo, pero realmente no se muy bien que estoy haciendo.
