@@ -1,0 +1,39 @@
+.header
+{
+	font-family: arial;
+	font-size: 60%;
+	text-align: center;
+
+	width: 33.3%;
+	color: white;
+	background-color: #777B6C;
+
+	border: 0px #777B6C;
+	border-radius: 4px 4px 0px 0px;
+	
+}
+#b1
+{
+	width: 25px; 
+	height: 15px; 
+}
+.compra
+{
+	font-size: 40%;
+	font-family: arial;
+
+	color: #777B6C;
+	background-color: #CDD5B8; 
+}
+.referencia
+{
+	font-size: 40%;
+	font-family: arial;
+
+	color: #777B6C;
+	background-color: #CDD5B8; 
+}
+.abajo
+{
+	background-color: #CDD5B8;
+}

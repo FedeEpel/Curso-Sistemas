@@ -1,0 +1,4 @@
+Hola Mati, yo de nuevo.
+
+Tengo problemas con el css del tema 6, no se si con una talbla se puede hacer y que quede bien. Ahi en el archivo que adjunte hay 
+dos formas distintas usando talbas. No se cual seria la mas acertada. O si hay una forma mejor.
