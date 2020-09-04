@@ -37,3 +37,10 @@ Donde result sería un array de resultados.
 ------
 
 El problema de la leche, vuelvo a revisar y te escribo nuevamente!
+
+---------------------------
+04/09
+
+Buenas,creo que ahi pude resolver la actividad individual 3. Lo unico es que no pude hacer para sacar el punto 
+al final de una palabara que en el texto tenia como ultimo elemento un punto, y como hacer para que las palabras
+se muestren con un espacio despues de la coma.
