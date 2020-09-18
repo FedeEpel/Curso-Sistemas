@@ -53,4 +53,6 @@ function identificarLacteoDeMayorContenidoDeCalcio( tabla_de_datos )
     return componente.lacteo;
 }
 
-console.log (identificarLacteoDeMayorContenidoDeCalcio(tabla));
+//console.log(identificarLacteoDeMayorContenidoDeCalcio(tabla));
+
+document.getElementById("ui").innerHTML = identificarLacteoDeMayorContenidoDeCalcio(tabla);

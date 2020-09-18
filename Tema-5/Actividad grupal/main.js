@@ -152,24 +152,24 @@ let panceta =
 };
 
 let stock =
-{
-	lacteos: [ leche, yogur_bebible, yogur, manteca ],
-	limpieza: [ detergente, lavandina, desinfectante ],
-	bebidas: [ pepsi, sprite, whiskey, agua ],
-	pan: [ pan_lactal, pan_lactal_integral, pan_de_hamburguesa ],
-	fiambres: [ jamon_cocido, jamon_crudo, panceta ]
-}
+[
+	lacteos = [ leche, yogur_bebible, yogur, manteca ],
+	limpieza = [ detergente, lavandina, desinfectante ],
+	bebidas = [ pepsi, sprite, whiskey, agua ],
+	pan = [ pan_lactal, pan_lactal_integral, pan_de_hamburguesa ],
+	fiambres = [ jamon_cocido, jamon_crudo, panceta ]
+]
 
 function actualiazcion( productos )
 {
-	let aumento_lacteo = lacteos.precio * 15 / 100;
-	let precio_actualizado = lacteos.precio + aumento_lacteo;
+	let aumento_lacteo = leche.precio * 15 / 100;
+	let precio_actualizado = leche.precio + aumento_lacteo;
 
 	for( prodcuto in productos)
 	{
-		if (stock = lacteos)
+		if (stock = leche)
 		{
-			lacteos.precio += aumento_lacteo;
+			leche.precio += aumento_lacteo;
 		}
 	}
 

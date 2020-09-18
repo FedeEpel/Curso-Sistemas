@@ -96,72 +96,37 @@ function onButton9Click ()
 
 function onSumButtonClick ()
 {
-	num1 = document.getElementById('display').value
 	document.getElementById('display').value += '+';
 };
 
 function onLessButtonClick ()
 {
-	num1 = document.getElementById('display').value
 	document.getElementById('display').value += '-';
 };
 
 function onMultiplyButtonClick ()
 {
-	num1 = document.getElementById('display').value
 	document.getElementById('display').value += '*';
 };
 
 function onDivideButtonClick ()
 {
-	num1 = document.getElementById('display').value
 	document.getElementById('display').value += '/';
 };
 
 function onPointButtonClick ()
 {
-	num1 = document.getElementById('display').value
 	document.getElementById('display').value += '.';
 };
 
 function onEqualButtonClick ()
 {
-	num2 = document.getElementById('display').value
-	document.getElementById('display').value += '=';
-	result();
+	document.getElementById('display').value = eval( display.value);
 };
 
 function onButtonClearClick ()
 {
 	document.getElementById('display').value = "";
-	num1 = 0;
-	num2 = 0;
-	operation = "";
-};
-
-function result()
-{
-	var result = 0;
-
-	switch(operation)
-	{
-		case document.getElementById('display').value = "+":
-			result = parseFloat(num1) + parseFloat(num2);
-			break;
-
-		case document.getElementById('display').value = "-":
-			result = parseFloat(num1) - parseFloat(num2);
-			break;
-
-		case document.getElementById('display').value = "*":
-			result = parseFloat(num1) * parseFloat(num2);
-			break;
-
-		case document.getElementById('display').value = "/":
-			result = parseFloat(num1) / parseFloat(num2);
-			break;
-	}
-	document.getElementById('display').value = result;
 };
 
 document.getElementById('app').innerHTML = calculator();
