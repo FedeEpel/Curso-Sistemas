@@ -30,7 +30,7 @@ class UserController
 
 	deleteUserButton()
 	{
-		window.prompt('Desea eliminar un contacto? Bueno, sentate y programalo salame');
+		window.prompt('Seguro que desea eliminar un contacto?)';
 	};
 };
 
