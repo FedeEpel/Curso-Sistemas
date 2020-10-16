@@ -5,7 +5,6 @@ class UserController
 		this.innerView = view;
 		this.innerModel = model;
 
-		this.innerModel.addEventListener("change", event => this.innerView.tableUpdate() );
 		this.innerView.tableUpdate();
 	}
 
@@ -13,7 +12,7 @@ class UserController
 	{
 		let newId = window.prompt("Ingrese el id para el nuevo usuario");
 
-		if ( !this.innerModel.existingUserValidation(id))
+		if ( !this.innerModel.existingUserValidation(newId))
 		{
 		this.innerModel.createUser({ id: newId, name: "Fede", lastName: "Gomez", address: "Consti 123", cellPhoneNumber: "2232228833", landlinePhoneNumber: "44257839", email: "fede@hotmail.com" } );
 		}

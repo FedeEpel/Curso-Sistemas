@@ -8,6 +8,8 @@ class UserView
 		this.id = id;
 
 		this.innerController = new UserController(model, this);
+		
+		this.innerModel.addEventListener("change", event => this.tableUpdate() );
 	};
 
 	tableUpdate()
