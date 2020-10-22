@@ -61,20 +61,24 @@ class UserModel extends EventTarget
 	{
 		return ( this.getUserById( id ) == null)? false : true;
 	};
-
+	/*
 	userDataValidation ( userData )
 	{
 		let success = true;
 
-		/*let argNumberRegex = new RegExp('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/')
+		
+		let argNumberRegex = new RegExp('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/')
 
 		success = ( success && userData.hasOwnProperty('id') && userData.id != null );
 		success = ( success && userData.hasOwnProperty('name') && userData.name != null );
 		success = ( success && userData.hasOwnProperty('cellPhoneNumber') && userData.cellPhoneNumber.match(argNumberRegex) );
-		success = ( success && userData.hasOwnProperty('email') && userData.email != null );*/
-
+		success = ( success && userData.hasOwnProperty('email') && userData.email != null );
+		
+	
+		
 		return success;
 	};
+	*/
 };
 
 export { UserModel };

@@ -5,7 +5,7 @@ class UserController
 		this.innerView = view;
 		this.innerModel = model;
 
-		this.innerView.tableUpdate();
+		this.innerView.update();
 	}
 
 	newUserButton() 
@@ -14,7 +14,7 @@ class UserController
 
 		if ( !this.innerModel.existingUserValidation(newId))
 		{
-		this.innerModel.createUser({ id: newId, name: "Fede", lastName: "Gomez", address: "Consti 123", cellPhoneNumber: "2232228833", landlinePhoneNumber: "44257839", email: "fede@hotmail.com" } );
+		this.innerModel.createUser({ id: newId, name: "Fede", lastName: "Gomez", address: "Consti 123", cellPhoneNumber: "2232228833", landlinePhoneNumber:"", email: "fede@hotmail.com" } );
 		}
 		else
 		{
@@ -29,8 +29,30 @@ class UserController
 
 	deleteUserButton()
 	{
-		window.prompt('Seguro que desea eliminar un contacto?)';
+		let newId = window.prompt('Desea eliminar un contacto?');
+
+		if ( this.innerModel.existingUserValidation(newId))
+		{
+			if ( window.confirm("Esta seguro que desea borrar el contacto?"))
+			{
+				this.innerModel.deleteUser(newId);
+			}
+
+		}
+		else
+		{
+			window.alert("El contacto que desea eliminar no existe")
+		}
 	};
+	w3_open() {
+	  document.getElementById("open").style.display = "block";
+	  
+	}
+
+	w3_close() {
+	  document.getElementById(this.id + "mySidebar").style.display = "none";
+	  document.getElementById(this.id + "myOverlay").style.display = "none";
+	}
 };
 
 export {UserController};
